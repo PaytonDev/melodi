@@ -31,8 +31,6 @@ const musicMenu: NavItem[] = [
   { name: "Favorites", icon: MdFavorite, route: "/favorites" },
 ];
 
-const playlist = new Array(20).fill(1).map((_, i) => ({ name: `Playlist ${i}` }));
-
 const MenuList = ({ menuItems }) => {
   return (
     <Box>
