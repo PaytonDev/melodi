@@ -23,3 +23,8 @@ export const validateRoute = (handler) => async (req: NextApiRequest, res: NextA
   }
   res.status(401).json({ error: "Not authenticated" });
 };
+
+export const validateToken = (token) => {
+  const { user } = jwt.verify(token, process.env.JWT_SECRET_KEY);
+  return user;
+};

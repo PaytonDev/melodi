@@ -16,7 +16,7 @@ export default function Home({ artists }) {
       image={imageUrl}
       subtitle="subtitle"
       title={`${user?.firstName} ${user?.lastName}`}
-      description={`${user.playlistCount} public playlists`}
+      description={`${user?.playlistCount} public playlists`}
       roundImage={true}
     >
       <Box color="white" paddingX="40px">

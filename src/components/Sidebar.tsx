@@ -88,7 +88,13 @@ export const Sidebar = () => {
                 key={item.id}
               >
                 <LinkBox>
-                  <NextLink href="/" passHref>
+                  <NextLink
+                    href={{
+                      pathname: "/playlist/[id]",
+                      query: { id: item.id },
+                    }}
+                    passHref
+                  >
                     <LinkOverlay>{item.name}</LinkOverlay>
                   </NextLink>
                 </LinkBox>
