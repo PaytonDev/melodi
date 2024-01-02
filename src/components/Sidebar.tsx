@@ -45,7 +45,7 @@ const MenuList = ({ menuItems }) => {
             key={item.name}
             _hover={{ backgroundColor: "gray.800" }}
           >
-            <LinkBox key={item.name}>
+            <LinkBox>
               <NextLink href={item.route} passHref>
                 <LinkOverlay>
                   <ListIcon as={item.icon} fontSize="16px" color="white" marginRight="20px" />
