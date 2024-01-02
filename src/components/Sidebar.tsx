@@ -31,8 +31,6 @@ const musicMenu: NavItem[] = [
   { name: "Favorites", icon: MdFavorite, route: "/favorites" },
 ];
 
-const playlist = new Array(20).fill(1).map((_, i) => ({ name: `Playlist ${i}` }));
-
 const MenuList = ({ menuItems }) => {
   return (
     <Box>
@@ -47,7 +45,7 @@ const MenuList = ({ menuItems }) => {
             key={item.name}
             _hover={{ backgroundColor: "gray.800" }}
           >
-            <LinkBox key={item.name}>
+            <LinkBox>
               <NextLink href={item.route} passHref>
                 <LinkOverlay>
                   <ListIcon as={item.icon} fontSize="16px" color="white" marginRight="20px" />

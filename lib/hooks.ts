@@ -4,6 +4,8 @@ import fetcher from "./fetcher";
 export const useUser = () => {
   const { data, error } = useSWR("/user", fetcher);
 
+  console.log("data", data);
+
   return {
     user: data,
     isLoading: !error && !data,
